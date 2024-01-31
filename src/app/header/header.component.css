@@ -1,0 +1,69 @@
+/* header.component.css */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333; /* Set your desired background color */
+    color: white;
+    width: 100%;
+
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    max-width: 25px;
+    height: auto;
+    margin-right: 10px; /* Add some spacing between logo and navigation */
+  }
+  
+  .navigation {
+    display: flex;
+  }
+  
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  .navigation a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobile dropdown styles */
+  @media screen and (max-width: 768px) {
+    .logo img {
+      max-width: 25px;
+      margin-right: 5px; /* Adjust spacing for mobile */
+    }
+  
+    .navigation {
+      display: none; /* Hide navigation links by default */
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust the distance from the header */
+      left: 0;
+      width: 100%;
+      background-color: #333; /* Set your desired background color for the dropdown */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  
+    .navigation a {
+      padding: 10px 20px;
+      border-bottom: 1px solid white;
+    }
+  
+    .navigation.show {
+      display: flex; /* Show navigation links when the show class is added */
+    }
+  }
+  .bg-body-tertiary {
+    margin-bottom: 50px;
+}
